@@ -1,0 +1,10 @@
+1. Nr accesari
+2. Nr accesari DAR mareice
+3. Heatmap pentru mouse pos
+4.Sth specific
+GENERAL CEVA DE STATISTICA: Most Visioned Movie statistics
+5.Pagina profil
+Watchlist
+search by category
+Pagina pt actor cu referinta la filmele in care joaca
+
