@@ -28,7 +28,7 @@ const MediaSearch = () => {
   const search = useCallback(
     async () => {
       setOnSearch(true);
-
+      console.log("CALLBACK FUNCTION UP");
       const { response, err } = await mediaApi.search({
         mediaType,
         query,
@@ -58,7 +58,7 @@ const MediaSearch = () => {
         }
       }
     },
-    [mediaType, query, page,selectedGenres],
+    [query, page,selectedGenres],
   );
 
   useEffect(() => {
@@ -74,21 +74,23 @@ const MediaSearch = () => {
   }, [mediaType]);
 
   useEffect(() => {
+    console.log("USE EFFECT UP");
+
     if (mediaType === "people") return;
-    const getGenres = async () => {
+    const getGenres = async () => 
+    {
       dispatch(setGlobalLoading(true));
       const { response, err } = await genreApi.getList({ mediaType });
-    
       if (response) {
         setGenres(response.genres);
+        dispatch(setGlobalLoading(false));
       }
       if (err) {
         toast.error(err.message);
         setGlobalLoading(false);
       }
-      };
-      getGenres();
-      console.log(genres); 
+    };
+    getGenres();
   }, [dispatch,mediaType]);
 
   const onCategoryChange = (selectedCategory) => setMediaType(selectedCategory);

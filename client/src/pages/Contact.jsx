@@ -46,7 +46,7 @@ const Contact = () => {
     }
 
 
-    emailjs.send("service_e36vdc9","template_nyo8mqe",{
+    emailjs.send(serviceID,templateID,{
       client_name: name,
       send_to: email
     },"661qPVd7n80BV2Am7")
