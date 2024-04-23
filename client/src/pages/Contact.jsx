@@ -52,7 +52,7 @@ const Contact = () => {
     },"661qPVd7n80BV2Am7")
     .then((result) => {
       console.log(result.text);
-      toast.success("Email sent successfully");
+      toast.success("Form sent successfully");
       setName('');
       setEmail('');
       setSubject('');

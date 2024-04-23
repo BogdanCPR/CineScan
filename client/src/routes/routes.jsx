@@ -9,6 +9,7 @@ import PasswordUpdate from '../pages/PasswordUpdate'
 import ProtectedPage from '../components/common/ProtectedPage'
 import UserPage from "../pages/UserPage"
 import Contact from "../pages/Contact"
+import Administrator from "../pages/Administrator"
 
 export const routesGen = {
 	home: "/",
@@ -20,7 +21,8 @@ export const routesGen = {
 	reviewList: "/reviews",
 	passwordUpdate: "password-update",
 	userPage:(id) => `/userPage/${id}`,
-	contact: "/contact"
+	contact: "/contact",
+	admin: "/admin"
 }
 
 const routes = [
@@ -83,6 +85,15 @@ const routes = [
 		path: "/contact",
 		element: <Contact />,
 		state: "contact"
+	},
+	{
+		path: "/admin",
+		element: (
+			<ProtectedPage>
+				<ReviewList	/>
+			</ProtectedPage>
+		),
+		state: "admin"
 	}
 ]
 
