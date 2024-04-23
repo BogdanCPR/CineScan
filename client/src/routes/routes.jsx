@@ -7,6 +7,9 @@ import MediaSearch from '../pages/MediaSearch'
 import ReviewList from '../pages/ReviewList'
 import PasswordUpdate from '../pages/PasswordUpdate'
 import ProtectedPage from '../components/common/ProtectedPage'
+import UserPage from "../pages/UserPage"
+import Contact from "../pages/Contact"
+import Administrator from "../pages/Administrator"
 
 export const routesGen = {
 	home: "/",
@@ -16,7 +19,10 @@ export const routesGen = {
 	person: (id) => `/person/${id}`,
 	favoriteList : "/favorites",
 	reviewList: "/reviews",
-	passwordUpdate: "password-update"
+	passwordUpdate: "password-update",
+	userPage:(id) => `/userPage/${id}`,
+	contact: "/contact",
+	admin: "/admin"
 }
 
 const routes = [
@@ -69,6 +75,25 @@ const routes = [
 	{
 		path: "/:mediaType/:mediaId",
 		element: <MediaDetail />
+	},
+	{
+		path: "/userPage/:userId",
+		element: <UserPage />,
+		state: "userPage"
+	},
+	{
+		path: "/contact",
+		element: <Contact />,
+		state: "contact"
+	},
+	{
+		path: "/admin",
+		element: (
+			<ProtectedPage>
+				<ReviewList	/>
+			</ProtectedPage>
+		),
+		state: "admin"
 	}
 ]
 
