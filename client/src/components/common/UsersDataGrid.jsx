@@ -129,41 +129,43 @@ const UsersDataGrid = () => {
 		setRows(prevRows => prevRows.filter(row => row.username !== username));
 	  };
 
+	  const removeReview = async (reviewId) => {};
+
 	  
-	  
-  return (
-	<Box sx={{ width: '100%', position:"relative", marginTop:"10vh"}}>
-    <DataGrid
-      rows={rows}
-      columns={columns}
-	  
-      onRowSelectionModelChange={(newSelection) => {
-        const selectedUsername = newSelection.map((id) => {
-          const row = rows.find(row => row.id === id);
-          return row ? row.id : null;
-        });
-        setSelectedUser(selectedUsername);
-      }}
-      selectionModel={selectedUser.map(user => user.id)}
-    />
-    <Button onClick={() => promoteToAdmin(selectedUser)}>Promote</Button>
-    <Button onClick={() => demoteToUser(selectedUser)}>Demote</Button>
-    <Box sx={{ width: '100%', position:"relative", marginTop:"5vh"}}>
-      <DataGrid
-        rows={userReviews}
-        columns={reviewColumns}
-		onRowSelectionModelChange={(newSelection) => {
-			const selectedReview = newSelection.map((id) => {
-			  const row = rows.find(row => row.id === id);
-			  return row ? row.id : null;
-			});
-			setSelectedReview(selectedReview);
-		  }}
-		  selectionModel={selectedUser.map(user => user.id)}
-      />
-    </Box>
-  </Box>
-  )
+	  return (
+		<Box sx={{ width: '100%', position:"relative", marginTop:"10vh"}}>
+		  <DataGrid
+			rows={rows}
+			columns={columns}
+			onRowSelectionModelChange={(newSelection) => {
+			  const selectedUsername = newSelection.map((id) => {
+				const row = rows.find(row => row.id === id);
+				return row ? row.id : null;
+			  });
+			  setSelectedUser(selectedUsername);
+			}}
+			selectionModel={selectedUser.map(user => user.id)}
+		  />
+		  <Button onClick={() => promoteToAdmin(selectedUser)}>Promote</Button>
+		  <Button onClick={() => demoteToUser(selectedUser)}>Demote</Button>
+		  <Button onClick={() => removeUser(selectedUser)}>Delete User</Button> {/* Added Delete User button */}
+		  <Box sx={{ width: '100%', position:"relative", marginTop:"5vh"}}>
+			<DataGrid
+			  rows={userReviews}
+			  columns={reviewColumns}
+			  onRowSelectionModelChange={(newSelection) => {
+				const selectedReview = newSelection.map((id) => {
+				  const row = rows.find(row => row.id === id);
+				  return row ? row.id : null;
+				});
+				setSelectedReview(selectedReview);
+			  }}
+			  selectionModel={selectedUser.map(user => user.id)}
+			/>
+			<Button onClick={() => removeReview(selectedReview)}>Delete Review</Button> {/* Added Delete Review button */}
+		  </Box>
+		</Box>
+	)
 }
 
 export default UsersDataGrid

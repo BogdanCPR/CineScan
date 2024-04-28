@@ -1,0 +1,80 @@
+[{
+  "_id": {
+    "$oid": "6627d096a62f8bf29679d5f8"
+  },
+  "accessLevel": "admin",
+  "displayName": "CaprisPal",
+  "username": "bogdanCPR",
+  "salt": "f28502ed6f302d8ae3d99cc0b022722d",
+  "password": "fca6c004f8901d51b810d749bf815704118b49b57db6efbf4c40fb23ec46b3d0b531bc04b42eb974861c8e7118a066096da834764b85db9bf44bdc197f5a6f0a",
+  "createdAt": {
+    "$date": "2024-04-23T15:15:34.629Z"
+  },
+  "updatedAt": {
+    "$date": "2024-04-27T15:23:14.020Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "662cb8a13432c3095000bc8a"
+  },
+  "accessLevel": "user",
+  "displayName": "MarianNegura",
+  "username": "mariannegura",
+  "salt": "62659f242abae578eb55ae80ecf298aa",
+  "password": "d01ecc258fdc5e0927025485d6441ff334e542e2da1270192888e96b841501bf79fd1e5c4827bb8105cea7628f0f25fa6247502829f155fd99d9843d9344f317",
+  "createdAt": {
+    "$date": "2024-04-27T08:34:41.247Z"
+  },
+  "updatedAt": {
+    "$date": "2024-04-27T10:18:21.188Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "662cbbf4d695df078f59c0e4"
+  },
+  "accessLevel": "user",
+  "displayName": "Test USER",
+  "username": "userTest",
+  "salt": "ca77b1a0920e910ec4e790cde9bd6fc1",
+  "password": "b44808697d363809c50f14c9c20de6cebad223eb9d334a5b7818a32bc169f0f4a4563067779f6f3eadfb97e05e25f1f2c83506606a21ca594ac69c2331fc16ce",
+  "createdAt": {
+    "$date": "2024-04-27T08:48:52.145Z"
+  },
+  "updatedAt": {
+    "$date": "2024-04-27T10:15:41.690Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "662cbc12d695df078f59c0eb"
+  },
+  "accessLevel": "admin",
+  "displayName": "Administrator Test",
+  "username": "administrator_test",
+  "salt": "e99e493bc5356318c2767bd54f8f9514",
+  "password": "3e0db6a12e238654db0413fb5c01fe064a12ae72522a46bb884128a36066d1530947e2c1d8fae528869dabdde606c35606e56b198214bbf65b21ef9eb63633e2",
+  "createdAt": {
+    "$date": "2024-04-27T08:49:22.745Z"
+  },
+  "updatedAt": {
+    "$date": "2024-04-27T10:15:48.498Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "662d2a7c42dcb4db7586191b"
+  },
+  "accessLevel": "user",
+  "displayName": "Ungureanu Andrei",
+  "username": "ungureanuandrei",
+  "salt": "6840846daaebab78bead2beaae579c22",
+  "password": "9ea8ad7f8ba0ea16f33e94bd11b00e174732f52e8c6aa13f02841cbd57f035ead2d806f6721afa9120fc19739738ff873a99a4e7549f6ddf87aa4c3a079c92e0",
+  "createdAt": {
+    "$date": "2024-04-27T16:40:28.262Z"
+  },
+  "updatedAt": {
+    "$date": "2024-04-27T16:40:28.262Z"
+  }
+}]

@@ -1,0 +1,38 @@
+[{
+  "_id": {
+    "$oid": "662d1f7c0cf516485fa81090"
+  },
+  "user": {
+    "$oid": "6627d096a62f8bf29679d5f8"
+  },
+  "mediaType": "movie",
+  "mediaId": "1011985",
+  "mediaTitle": "Kung Fu Panda 4",
+  "mediaPoster": "/kDp1vUBnMpe8ak4rjgl3cLELqjU.jpg",
+  "mediaRate": 7.148,
+  "createdAt": {
+    "$date": "2024-04-27T15:53:32.862Z"
+  },
+  "updatedAt": {
+    "$date": "2024-04-27T15:53:32.862Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "662e1279181f1e0d6bf48d49"
+  },
+  "user": {
+    "$oid": "6627d096a62f8bf29679d5f8"
+  },
+  "mediaType": "movie",
+  "mediaId": "129",
+  "mediaTitle": "Spirited Away",
+  "mediaPoster": "/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg",
+  "mediaRate": 8.538,
+  "createdAt": {
+    "$date": "2024-04-28T09:10:17.086Z"
+  },
+  "updatedAt": {
+    "$date": "2024-04-28T09:10:17.086Z"
+  }
+}]
