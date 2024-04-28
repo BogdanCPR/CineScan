@@ -6,6 +6,7 @@ import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import RateReviewOutlinedIcon from "@mui/icons-material/RateReviewOutlined";
 import LockResetOutlinedIcon from "@mui/icons-material/LockResetOutlined";
 import PersonPinCircleOutlinedIcon from '@mui/icons-material/PersonPinCircleOutlined';
+import AdminPanelSettingsOutlinedIcon from '@mui/icons-material/AdminPanelSettingsOutlined';
 
 const main = [
   {
@@ -58,6 +59,12 @@ const user = [
     path: "/password-update",
     icon: <LockResetOutlinedIcon />,
     state: "password.update"
+  },
+  {
+    display: "admin",
+    path: "/admin",
+    icon: <AdminPanelSettingsOutlinedIcon />,
+    state: "admin"
   }
 ];
 

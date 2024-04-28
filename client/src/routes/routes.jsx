@@ -9,7 +9,7 @@ import PasswordUpdate from '../pages/PasswordUpdate'
 import ProtectedPage from '../components/common/ProtectedPage'
 import UserPage from "../pages/UserPage"
 import Contact from "../pages/Contact"
-import Administrator from "../pages/Administrator"
+import Administrator from "../pages/AdminPage"
 
 export const routesGen = {
 	home: "/",
@@ -90,7 +90,7 @@ const routes = [
 		path: "/admin",
 		element: (
 			<ProtectedPage>
-				<ReviewList	/>
+				<Administrator	/>
 			</ProtectedPage>
 		),
 		state: "admin"
