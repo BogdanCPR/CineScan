@@ -9,6 +9,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import emailjs from 'emailjs-com';
 import { useState } from 'react';
 import { toast } from "react-toastify";
+import contactApi from '../api/modules/contact.api';
 
 const mapContainerStyle = {
   width: '100%',
@@ -25,6 +26,8 @@ const pinCenter = {
   lng: 26.08637382164507,
 };
 
+
+
 const Contact = () => {
   const theme = useTheme();
 
@@ -36,6 +39,16 @@ const Contact = () => {
   const serviceID = 'default_service';
   const templateID = 'template_nyo8mqe';
 
+  const sendFormAsync = async (name, email, subject, message) => {
+    try {
+      const response = await contactApi.saveForm(name, email, subject, message);
+      console.log(response);
+      toast.success("Form sent successfully");
+    } catch (error) {
+      console.error(error);
+      toast.error("Failed to send form");
+    }
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -45,14 +58,13 @@ const Contact = () => {
       return;
     }
 
-
+    sendFormAsync(name, email, subject, message);
     emailjs.send(serviceID,templateID,{
       client_name: name,
       send_to: email
     },"661qPVd7n80BV2Am7")
     .then((result) => {
       console.log(result.text);
-      toast.success("Form sent successfully");
       setName('');
       setEmail('');
       setSubject('');

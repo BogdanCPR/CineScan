@@ -28,7 +28,6 @@ const MediaSearch = () => {
   const search = useCallback(
     async () => {
       setOnSearch(true);
-      console.log("CALLBACK FUNCTION UP");
       const { response, err } = await mediaApi.search({
         mediaType,
         query,
@@ -74,7 +73,6 @@ const MediaSearch = () => {
   }, [mediaType]);
 
   useEffect(() => {
-    console.log("USE EFFECT UP");
 
     if (mediaType === "people") return;
     const getGenres = async () => 

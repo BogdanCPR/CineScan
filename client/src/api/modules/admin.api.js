@@ -3,7 +3,8 @@ import privateClient from '../client/private.client'
 
 const adminEndpoints = {
 	users:"admin/users",
-	reviews:"admin/reviews"
+	reviews:"admin/reviews",
+	accessLevel:"admin/accessLevel"
 }
 
 const adminApi = {
@@ -28,11 +29,42 @@ const adminApi = {
 		  return { err };
 		}
 	  },
+	removeReview: async (reviewId) => {
+		try {
+			console.log("REVIEW ID", reviewId);
+			const response = await privateClient.delete(
+				`${adminEndpoints.reviews}/${reviewId}`
+			)
+			return { response };
+		} catch (err) {
+			return { err };
+		}
+	},
 	updateUserAccessLevel: async (username, accessLevel) => {
 		try {
 			const response = await privateClient.put(
 				`${adminEndpoints.users}/${username}`,
 				{ accessLevel }
+			)
+			return { response };
+		} catch (err) {
+			return { err };
+		}
+	},
+	getUserAccessLevel: async () => {
+		try {
+			const response = await privateClient.get(
+				adminEndpoints.accessLevel
+			)
+			return { response };
+		} catch (err) {
+			return { err };
+		}
+	},
+	removeUser: async (username) => {
+		try {
+			const response = await privateClient.delete(
+				`${adminEndpoints.users}/${username}`
 			)
 			return { response };
 		} catch (err) {
